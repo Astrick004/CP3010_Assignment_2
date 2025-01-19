@@ -6,7 +6,7 @@ http.createServer(function (req, res) {
     var q = url.parse(req.url, true);
     var filename;
 
-    if (q.pathname === '/index') {
+    if (q.pathname === '/index' || q.pathname === '/') {
         filename = './index.html';
     } else if (q.pathname === '/about') {
         filename = './about.html';
